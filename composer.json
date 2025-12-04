@@ -1,0 +1,18 @@
+{
+  "name": "sma/sma-invoice-admin-php-sdk",
+  "description": "PHP SDK for SMA Invoice Admin service (sma-invoice-admin)",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sma\\InvoiceAdmin\\": "src/"
+    }
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
