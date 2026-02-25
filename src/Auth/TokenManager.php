@@ -68,10 +68,13 @@ class TokenManager
         if (!$id || !$pw) {
             throw new ApiException('Source credentials are required (id, password)');
         }
-        $res = $this->http->request('POST', '/sources/login', null, [
-            'id' => $id,
-            'password' => $pw,
-        ]);
+        $payload = [ 'id' => $id ];
+        if ($pw !== null) {
+            $payload['password'] = $pw;
+            // some backends expect the field named 'secret' instead of 'password'
+            $payload['secret'] = $pw;
+        }
+        $res = $this->http->request('POST', '/sources/login', null, $payload);
         $body = $res['body'];
         if (!is_array($body)) {
             throw new ApiException('Unexpected login response');
@@ -87,7 +90,7 @@ class TokenManager
     private function extractToken(array $body): ?string
     {
         // Try common fields
-        foreach (['token', 'access_token', 'jwt'] as $k) {
+        foreach (['token', 'access_token', 'jwt', 'accessToken'] as $k) {
             if (isset($body[$k]) && is_string($body[$k]) && $body[$k] !== '') {
                 return $body[$k];
             }
