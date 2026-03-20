@@ -24,9 +24,14 @@ class Invoices extends BaseResource
         return $this->client->put('/invoices/' . $id, $payload);
     }
 
-    public function delete(string $id)
+    public function delete(string $id, array $query = [])
     {
-        return $this->client->delete('/invoices/' . $id);
+        return $this->client->delete('/invoices/' . $id, $query);
+    }
+
+    public function cancel(string $id, array $query = [])
+    {
+        return $this->delete($id, $query);
     }
 
     public function seal(string $id, array $payload = [])

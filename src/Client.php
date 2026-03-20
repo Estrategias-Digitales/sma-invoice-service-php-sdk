@@ -55,7 +55,7 @@ class Client
     public function get(string $path, array $query = [], array $headers = []) { return $this->request('GET', $path, $query, null, $headers); }
     public function post(string $path, array $body = [], array $headers = []) { return $this->request('POST', $path, null, $body, $headers); }
     public function put(string $path, array $body = [], array $headers = []) { return $this->request('PUT', $path, null, $body, $headers); }
-    public function delete(string $path, array $headers = []) { return $this->request('DELETE', $path, null, null, $headers); }
+    public function delete(string $path, array $query = [], array $headers = []) { return $this->request('DELETE', $path, $query, null, $headers); }
 
     // Resource accessors
     public function health(): Resources\Health { return new Resources\Health($this); }

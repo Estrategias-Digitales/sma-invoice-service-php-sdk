@@ -24,9 +24,9 @@ class Clients extends BaseResource
         return $this->client->put('/clients/' . $id, $payload);
     }
 
-    public function delete(string $id)
+    public function delete(string $id, array $query = [])
     {
-        return $this->client->delete('/clients/' . $id);
+        return $this->client->delete('/clients/' . $id, $query);
     }
 
     public function providerBalance(string $id)
@@ -44,8 +44,8 @@ class Clients extends BaseResource
         return $this->client->put('/clients/' . $id . '/stamping-provider-config', $payload);
     }
 
-    public function deleteStampingProviderConfig(string $id)
+    public function deleteStampingProviderConfig(string $id, array $query = [])
     {
-        return $this->client->delete('/clients/' . $id . '/stamping-provider-config');
+        return $this->client->delete('/clients/' . $id . '/stamping-provider-config', $query);
     }
 }

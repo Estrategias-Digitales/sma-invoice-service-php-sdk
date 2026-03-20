@@ -32,9 +32,9 @@ class Sources extends BaseResource
         return $this->client->put('/sources/' . $id, $payload);
     }
 
-    public function delete(string $id)
+    public function delete(string $id, array $query = [])
     {
-        return $this->client->delete('/sources/' . $id);
+        return $this->client->delete('/sources/' . $id, $query);
     }
 
     public function rotateSecret(string $id)
