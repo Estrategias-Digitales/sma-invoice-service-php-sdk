@@ -1,6 +1,6 @@
 {
-  "name": "sma/sma-invoice-admin-php-sdk",
-  "description": "PHP SDK for SMA Invoice Admin service (sma-invoice-admin)",
+  "name": "sma/sma-invoice-service-php-sdk",
+  "description": "PHP SDK for SMA Invoice Admin service (sma-invoice-service)",
   "type": "library",
   "license": "MIT",
   "require": {
