@@ -33,8 +33,8 @@ Ejemplo básico
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Sma\InvoiceAdmin\Client;
-use Sma\InvoiceAdmin\Config;
+use Sma\InvoiceService\Client;
+use Sma\InvoiceService\Config;
 
 $config = new Config(
     'https://api-y744ss7wmq-uc.a.run.app',
@@ -77,7 +77,7 @@ Extensibilidad
 
 Notas
 - El servicio está en desarrollo; la estructura del SDK favorece añadir endpoints rápidamente.
-- Excepciones: se lanza `Sma\InvoiceAdmin\Exception\ApiException` en errores HTTP o de red.
+- Excepciones: se lanza `Sma\InvoiceService\Exception\ApiException` en errores HTTP o de red.
 
 OpenAPI del servicio
 - https://api-y744ss7wmq-uc.a.run.app/v1/openapi.json

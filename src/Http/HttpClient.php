@@ -1,8 +1,8 @@
 <?php
 
-namespace Sma\InvoiceAdmin\Http;
+namespace Sma\InvoiceService\Http;
 
-use Sma\InvoiceAdmin\Exception\ApiException;
+use Sma\InvoiceService\Exception\ApiException;
 
 class HttpClient
 {

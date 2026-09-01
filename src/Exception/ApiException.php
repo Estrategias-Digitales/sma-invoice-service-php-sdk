@@ -1,6 +1,6 @@
 <?php
 
-namespace Sma\InvoiceAdmin\Exception;
+namespace Sma\InvoiceService\Exception;
 
 use Exception;
 

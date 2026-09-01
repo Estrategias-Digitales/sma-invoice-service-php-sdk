@@ -1,10 +1,10 @@
 <?php
 
-namespace Sma\InvoiceAdmin;
+namespace Sma\InvoiceService;
 
-use Sma\InvoiceAdmin\Auth\TokenManager;
-use Sma\InvoiceAdmin\Exception\ApiException;
-use Sma\InvoiceAdmin\Http\HttpClient;
+use Sma\InvoiceService\Auth\TokenManager;
+use Sma\InvoiceService\Exception\ApiException;
+use Sma\InvoiceService\Http\HttpClient;
 
 class Client
 {

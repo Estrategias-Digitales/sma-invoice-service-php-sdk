@@ -1,10 +1,10 @@
 <?php
 
-namespace Sma\InvoiceAdmin\Auth;
+namespace Sma\InvoiceService\Auth;
 
-use Sma\InvoiceAdmin\Config;
-use Sma\InvoiceAdmin\Exception\ApiException;
-use Sma\InvoiceAdmin\Http\HttpClient;
+use Sma\InvoiceService\Config;
+use Sma\InvoiceService\Exception\ApiException;
+use Sma\InvoiceService\Http\HttpClient;
 
 /**
  * Handles bearer token acquisition and refresh.

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sma\InvoiceAdmin\Resources;
+namespace Sma\InvoiceService\Resources;
 
-use Sma\InvoiceAdmin\Client;
+use Sma\InvoiceService\Client;
 
 abstract class BaseResource
 {

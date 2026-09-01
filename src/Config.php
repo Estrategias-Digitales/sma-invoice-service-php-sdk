@@ -1,6 +1,6 @@
 <?php
 
-namespace Sma\InvoiceAdmin;
+namespace Sma\InvoiceService;
 
 class Config
 {

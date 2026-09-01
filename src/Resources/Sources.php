@@ -1,6 +1,6 @@
 <?php
 
-namespace Sma\InvoiceAdmin\Resources;
+namespace Sma\InvoiceService\Resources;
 
 class Sources extends BaseResource
 {

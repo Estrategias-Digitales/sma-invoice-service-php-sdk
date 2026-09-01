@@ -26,17 +26,17 @@ HTTP / Cliente base
 - HttpClient implementa GET/POST/PUT/DELETE con cURL.
 - Envia y recibe JSON por defecto (headers `Content-Type: application/json`, `Accept: application/json`).
 - Las respuestas son normalizadas a: `{ status, headers, body }` donde `body` es JSON decodificado (array) si es posible; si no, es string.
-- Errores HTTP (>=400) o de red lanzan `Sma\InvoiceAdmin\Exception\ApiException` con `statusCode` y `responseBody` (cuando aplica).
+- Errores HTTP (>=400) o de red lanzan `Sma\InvoiceService\Exception\ApiException` con `statusCode` y `responseBody` (cuando aplica).
 
 Estructura del SDK
-- Namespace raíz: `Sma\InvoiceAdmin\`
+- Namespace raíz: `Sma\InvoiceService\`
 - Clases principales:
   - `Config`: baseUrl, sourceId, sourcePassword.
   - `HttpClient`: capa HTTP.
   - `Auth\TokenManager`: gestiona el bearer token.
   - `Client`: fachada que inyecta Authorization y reintenta una vez ante 401.
   - `Resources\*`: endpoints agrupados por dominio (Health, Sources, Clients, Invoices, Operations).
-- PSR-4: `src/` mapea a `Sma\InvoiceAdmin\`.
+- PSR-4: `src/` mapea a `Sma\InvoiceService\`.
 
 Política de reintentos
 - Reintento automático solo en caso de 401 y únicamente una vez, efectuando refresh de token.
